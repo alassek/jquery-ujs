@@ -220,7 +220,7 @@
       if (!message) { return true; }
 
       if (rails.fire(element, 'confirm')) {
-        answer = rails.confirm(message);
+        answer = rails.confirm(message, element);
         callback = rails.fire(element, 'confirm:complete', [answer]);
       }
       return answer && callback;
